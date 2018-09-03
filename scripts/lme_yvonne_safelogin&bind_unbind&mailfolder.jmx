@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="26" it="0" lt="0" ct="0" ts="1534745748318" s="true" lb="BeanShell Sampler-登录" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="0" sby="0" sc="1" ec="0" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String"></responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">import sha256.SHA256;
+
+		SHA256.clear();
+
+
+ 		//添加参数
+		SHA256.addParam(&quot;account&quot;,&quot;jocelyn@xiaomancrm.com&quot;);
+		SHA256.addParam(&quot;is_remember&quot;,&quot;0&quot;);
+		SHA256.addParam(&quot;return_url&quot;,&quot;&quot;);
+		SHA256.addParam(&quot;system_id&quot;,&quot;&quot;);
+		SHA256.addParam(&quot;code&quot;,&quot;&quot;);
+		
+	
+          //密码通过sha256加密
+          String passwd = SHA256.SHA256Encrypt(&quot;1q2w3e4R&quot;);
+          //参数排序
+		String url1 =SHA256.getParamStrFromUrl();
+		String url = url1+&quot;&amp;password=&quot;+passwd;
+		
+
+		vars.put(&quot;url&quot;,url);
+</samplerData>
+</sample>
+<httpSample t="726" it="0" lt="724" ct="566" ts="1534745748751" s="true" lb="登录" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="1156" sby="361" sc="1" ec="0" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Server: Tengine/2.1.1
+Date: Mon, 20 Aug 2018 06:15:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.0.30
+Set-Cookie: KFXSESS=k0tapcs1od8qgiblsg56bjtm25; expires=Mon, 20-Aug-2018 14:15:50 GMT; Max-Age=28800; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: pskey=ebb87c9d744948fe157f6dbbed9d091795442c940c8baac31edd3ffd99201171; path=/; domain=xiaoman.cn; HttpOnly
+Set-Cookie: account=jocelyn%40xiaomancrm.com; path=/; domain=xiaoman.cn
+Set-Cookie: clientId=1; path=/; domain=xiaoman.cn
+Set-Cookie: userId=11855392; path=/; domain=xiaoman.cn
+Set-Cookie: pskey_exist=1; path=/; domain=xiaoman.cn
+Set-Cookie: set_id=3; path=/; domain=xiaoman.cn
+Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+: 
+Content-Length: 147
+Host: test.login-api.xiaoman.cn
+User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+</requestHeader>
+  <responseData class="java.lang.String">
+
+
+{&quot;code&quot;:0,&quot;msg&quot;:&quot;success&quot;,&quot;status&quot;:0,&quot;now&quot;:&quot;2018-08-20 14:15:50&quot;,&quot;data&quot;:{&quot;safe_login&quot;:0,&quot;return_url&quot;:&quot;&quot;}}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">code=&amp;system_id=&amp;return_url=&amp;is_remember=0&amp;account=jocelyn@xiaomancrm.com&amp;password=f1be43fcae71c0fa5149a05b04c63a877cd6ce9922ed8cdb38ee8d7c0b80e06b</queryString>
+  <java.net.URL>http://test.login-api.xiaoman.cn/read/login</java.net.URL>
+</httpSample>
+<sample t="21" it="0" lt="0" ct="0" ts="1534745749664" s="true" lb="BeanShell-发送邮件" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="0" sby="0" sc="1" ec="0" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String"></responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">import sha256.SHA256;
+
+    SHA256.clear();
+ 
+    SHA256.addParam(&quot;user_mail_id&quot;,&quot;30000036&quot;);
+    SHA256.addParam(&quot;mail_id&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;receiver&quot;,&quot;never.xu@sina.com&quot;);
+    SHA256.addParam(&quot;cc&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;bcc&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;subject&quot;,&quot;2018-08-20 14:15:47+jmeter自动发送邮件&quot;);
+    SHA256.addParam(&quot;content&quot;,&quot;2018-08-20 14:15:47+欢迎使用小满系统,这是自动发送的邮件哦&quot;);
+    SHA256.addParam(&quot;expose_flag&quot;,&quot;0&quot;);
+    SHA256.addParam(&quot;type&quot;,&quot;new&quot;);
+    SHA256.addParam(&quot;urgent_flag&quot;,&quot;0&quot;);
+    SHA256.addParam(&quot;receipt_flag&quot;,&quot;0&quot;);
+    SHA256.addParam(&quot;track_flag&quot;,&quot;1&quot;);
+    SHA256.addParam(&quot;plan_send_time&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;refer_mail_id&quot;,&quot;0&quot;);
+    SHA256.addParam(&quot;gs_ticket&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;gs_locale&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;gs_token&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;gs_inquiry_mail&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;extras&quot;,&quot;&quot;);
+    
+    //参数排序
+	String url =SHA256.getParamStrFromUrl();
+
+     vars.put(&quot;url&quot;,url);
+     </samplerData>
+</sample>
+<httpSample t="1177" it="0" lt="1177" ct="38" ts="1534745749700" s="true" lb="发送邮件--/api/mailWrite/send" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="779" sby="739" sc="1" ec="0" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Server: Tengine/2.1.1
+Date: Mon, 20 Aug 2018 06:15:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.0.30
+Set-Cookie: KFXSESS=u5di21fra8ttgajkq6uscmvf52; expires=Mon, 20-Aug-2018 14:15:50 GMT; Max-Age=28800; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+: 
+Content-Length: 357
+Host: test.k.xiaoman.cn
+User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;code&quot;:0,&quot;msg&quot;:&quot;success&quot;,&quot;now&quot;:&quot;2018-08-20 14:15:51&quot;,&quot;data&quot;:{&quot;mail_id&quot;:&quot;35336962&quot;,&quot;time_flag&quot;:0,&quot;allow_to_send&quot;:100,&quot;current_send&quot;:0}}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String">pskey=ebb87c9d744948fe157f6dbbed9d091795442c940c8baac31edd3ffd99201171; account=jocelyn%40xiaomancrm.com; clientId=1; userId=11855392; pskey_exist=1; set_id=3</cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">cc=&amp;bcc=&amp;mail_id=&amp;receiver=never.xu@sina.com&amp;subject=2018-08-20 14:15:47+jmeter自动发送邮件&amp;gs_inquiry_mail=&amp;urgent_flag=0&amp;extras=&amp;expose_flag=0&amp;type=new&amp;content=2018-08-20 14:15:47+欢迎使用小满系统,这是自动发送的邮件哦&amp;plan_send_time=&amp;gs_ticket=&amp;user_mail_id=30000036&amp;gs_locale=&amp;track_flag=1&amp;refer_mail_id=0&amp;receipt_flag=0&amp;gs_token=</queryString>
+  <java.net.URL>http://test.k.xiaoman.cn/api/mailWrite/send</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1534745750906" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="1232" sby="0" sc="1" ec="0" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">JMeterVariables:
+=
+JMeterThread.last_sample_ok=true
+JMeterThread.pack=org.apache.jmeter.threads.SamplePackage@756e9192
+START.HMS=141546
+START.MS=1534745746226
+START.YMD=20180820
+TESTSTART.MS=1534745746845
+__jmeter.USER_TOKEN__=线程组 1-1
+_matchNr=0
+account=jocelyn@xiaomancrm.com
+color=#ff6600
+content=2018-08-20+新增客户跟进
+content1=2018-08-20 14:15:47+欢迎使用小满系统,这是自动发送的邮件哦
+customer_type=1
+date=2018-08-20 14:15:47
+dx-api-source=crm
+end_time=2018-08-20
+host=test.k.xiaoman.cn
+hostdx=x.xiaoman.cn
+hosts=test.login-api.xiaoman.cn
+http=http
+password=1q2w3e4R
+plan_type=expired_and_not_expired
+port=80
+remark_time=2018-08-20 14:15:47
+ss=error
+star=4
+start_time=2018-08-20
+subject=2018-08-20 14:15:47+jmeter自动发送邮件
+tag_name=jmeter-add+1534745747500
+url=cc=&amp;bcc=&amp;mail_id=&amp;receiver=never.xu@sina.com&amp;subject=2018-08-20 14:15:47+jmeter自动发送邮件&amp;gs_inquiry_mail=&amp;urgent_flag=0&amp;extras=&amp;expose_flag=0&amp;type=new&amp;content=2018-08-20 14:15:47+欢迎使用小满系统,这是自动发送的邮件哦&amp;plan_send_time=&amp;gs_ticket=&amp;user_mail_id=30000036&amp;gs_locale=&amp;track_flag=1&amp;refer_mail_id=0&amp;receipt_flag=0&amp;gs_token=
+user_mail_id=30000036
+user_num1=1
+user_num2=2
+word=814093903@qq.com
+
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+
+<sample t="25" it="0" lt="0" ct="0" ts="1534755759721" s="true" lb="BeanShell Sampler-登录" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="0" sby="0" sc="1" ec="0" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String"></responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">import sha256.SHA256;
+
+		SHA256.clear();
+
+
+ 		//添加参数
+		SHA256.addParam(&quot;account&quot;,&quot;jocelyn@xiaomancrm.com&quot;);
+		SHA256.addParam(&quot;is_remember&quot;,&quot;0&quot;);
+		SHA256.addParam(&quot;return_url&quot;,&quot;&quot;);
+		SHA256.addParam(&quot;system_id&quot;,&quot;&quot;);
+		SHA256.addParam(&quot;code&quot;,&quot;&quot;);
+		
+	
+          //密码通过sha256加密
+          String passwd = SHA256.SHA256Encrypt(&quot;1q2w3e4R&quot;);
+          //参数排序
+		String url1 =SHA256.getParamStrFromUrl();
+		String url = url1+&quot;&amp;password=&quot;+passwd;
+		
+
+		vars.put(&quot;url&quot;,url);
+</samplerData>
+</sample>
+<httpSample t="341" it="0" lt="0" ct="331" ts="1534755759920" s="false" lb="登录" rc="Non HTTP response code: java.net.SocketException" rm="Non HTTP response message: Connection reset" tn="线程组 1-1" dt="text" by="1862" sby="0" sc="1" ec="1" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;code&quot;:0,/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+: 
+</requestHeader>
+  <responseData class="java.lang.String">java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocksSocketImpl.readSocksReply(SocksSocketImpl.java:124)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:459)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)
+	at java.lang.Thread.run(Thread.java:748)
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">code=&amp;system_id=&amp;return_url=&amp;is_remember=0&amp;account=jocelyn@xiaomancrm.com&amp;password=f1be43fcae71c0fa5149a05b04c63a877cd6ce9922ed8cdb38ee8d7c0b80e06b</queryString>
+  <java.net.URL>http://test.login-api.xiaoman.cn/read/login</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1534755760660" s="true" lb="BeanShell-发送邮件" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="0" sby="0" sc="1" ec="0" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String"></responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">import sha256.SHA256;
+
+    SHA256.clear();
+ 
+    SHA256.addParam(&quot;user_mail_id&quot;,&quot;30000036&quot;);
+    SHA256.addParam(&quot;mail_id&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;receiver&quot;,&quot;never.xu@sina.com&quot;);
+    SHA256.addParam(&quot;cc&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;bcc&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;subject&quot;,&quot;2018-08-20 17:02:39+jmeter自动发送邮件&quot;);
+    SHA256.addParam(&quot;content&quot;,&quot;2018-08-20 17:02:39+欢迎使用小满系统,这是自动发送的邮件哦&quot;);
+    SHA256.addParam(&quot;expose_flag&quot;,&quot;0&quot;);
+    SHA256.addParam(&quot;type&quot;,&quot;new&quot;);
+    SHA256.addParam(&quot;urgent_flag&quot;,&quot;0&quot;);
+    SHA256.addParam(&quot;receipt_flag&quot;,&quot;0&quot;);
+    SHA256.addParam(&quot;track_flag&quot;,&quot;1&quot;);
+    SHA256.addParam(&quot;plan_send_time&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;refer_mail_id&quot;,&quot;0&quot;);
+    SHA256.addParam(&quot;gs_ticket&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;gs_locale&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;gs_token&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;gs_inquiry_mail&quot;,&quot;&quot;);
+    SHA256.addParam(&quot;extras&quot;,&quot;&quot;);
+    
+    //参数排序
+	String url =SHA256.getParamStrFromUrl();
+
+     vars.put(&quot;url&quot;,url);
+     </samplerData>
+</sample>
+<httpSample t="3060" it="0" lt="0" ct="3060" ts="1534755760676" s="false" lb="发送邮件--/api/mailWrite/send" rc="Non HTTP response code: java.net.SocketException" rm="Non HTTP response message: Malformed reply from SOCKS server" tn="线程组 1-1" dt="text" by="1815" sby="0" sc="1" ec="1" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;code&quot;:0,/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+: 
+</requestHeader>
+  <responseData class="java.lang.String">java.net.SocketException: Malformed reply from SOCKS server
+	at java.net.SocksSocketImpl.readSocksReply(SocksSocketImpl.java:129)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:459)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.jmeter.protocol.http.sampler.hc.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:318)
+	at org.apache.jmeter.protocol.http.sampler.MeasuringConnectionManager$MeasuredConnection.open(MeasuringConnectionManager.java:114)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:654)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:413)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:74)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1189)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1178)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:491)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254)
+	at java.lang.Thread.run(Thread.java:748)
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">cc=&amp;bcc=&amp;mail_id=&amp;receiver=never.xu@sina.com&amp;subject=2018-08-20 17:02:39+jmeter自动发送邮件&amp;gs_inquiry_mail=&amp;urgent_flag=0&amp;extras=&amp;expose_flag=0&amp;type=new&amp;content=2018-08-20 17:02:39+欢迎使用小满系统,这是自动发送的邮件哦&amp;plan_send_time=&amp;gs_ticket=&amp;user_mail_id=30000036&amp;gs_locale=&amp;track_flag=1&amp;refer_mail_id=0&amp;receipt_flag=0&amp;gs_token=</queryString>
+  <java.net.URL>http://test.k.xiaoman.cn/api/mailWrite/send</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1534755763808" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="1197" sby="0" sc="1" ec="0" ng="1" na="1" hn="JocelynxudeMacBook-Air.local">
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">JMeterVariables:
+=
+JMeterThread.last_sample_ok=false
+JMeterThread.pack=org.apache.jmeter.threads.SamplePackage@1885485f
+START.HMS=170237
+START.MS=1534755757942
+START.YMD=20180820
+TESTSTART.MS=1534755758521
+_matchNr=0
+account=jocelyn@xiaomancrm.com
+color=#ff6600
+content=2018-08-20+新增客户跟进
+content1=2018-08-20 17:02:39+欢迎使用小满系统,这是自动发送的邮件哦
+customer_type=1
+date=2018-08-20 17:02:39
+dx-api-source=crm
+end_time=2018-08-20
+host=test.k.xiaoman.cn
+hostdx=x.xiaoman.cn
+hosts=test.login-api.xiaoman.cn
+http=http
+password=1q2w3e4R
+plan_type=expired_and_not_expired
+port=80
+remark_time=2018-08-20 17:02:39
+ss=error
+star=4
+start_time=2018-08-20
+subject=2018-08-20 17:02:39+jmeter自动发送邮件
+tag_name=jmeter-add+1534755759108
+url=cc=&amp;bcc=&amp;mail_id=&amp;receiver=never.xu@sina.com&amp;subject=2018-08-20 17:02:39+jmeter自动发送邮件&amp;gs_inquiry_mail=&amp;urgent_flag=0&amp;extras=&amp;expose_flag=0&amp;type=new&amp;content=2018-08-20 17:02:39+欢迎使用小满系统,这是自动发送的邮件哦&amp;plan_send_time=&amp;gs_ticket=&amp;user_mail_id=30000036&amp;gs_locale=&amp;track_flag=1&amp;refer_mail_id=0&amp;receipt_flag=0&amp;gs_token=
+user_mail_id=30000036
+user_num1=1
+user_num2=2
+word=814093903@qq.com
+
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+
+</testResults>

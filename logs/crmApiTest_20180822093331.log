@@ -1,0 +1,84 @@
+2018-08-22 09:33:33,176 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2018-08-22 09:33:33,194 INFO o.a.j.JMeter: Loading user properties from: /Applications/jmeter3.2/bin/user.properties
+2018-08-22 09:33:33,196 INFO o.a.j.JMeter: Loading system properties from: /Applications/jmeter3.2/bin/system.properties
+2018-08-22 09:33:33,207 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2018-08-22 09:33:33,207 INFO o.a.j.JMeter: Version 3.2 r1790748
+2018-08-22 09:33:33,208 INFO o.a.j.JMeter: java.version=1.8.0_144
+2018-08-22 09:33:33,208 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2018-08-22 09:33:33,208 INFO o.a.j.JMeter: os.name=Mac OS X
+2018-08-22 09:33:33,208 INFO o.a.j.JMeter: os.arch=x86_64
+2018-08-22 09:33:33,208 INFO o.a.j.JMeter: os.version=10.12.5
+2018-08-22 09:33:33,208 INFO o.a.j.JMeter: file.encoding=UTF-8
+2018-08-22 09:33:33,208 INFO o.a.j.JMeter: Max memory     =536870912
+2018-08-22 09:33:33,208 INFO o.a.j.JMeter: Available Processors =4
+2018-08-22 09:33:33,226 INFO o.a.j.JMeter: Default Locale=中文 (中国)
+2018-08-22 09:33:33,226 INFO o.a.j.JMeter: JMeter  Locale=中文 (中国)
+2018-08-22 09:33:33,226 INFO o.a.j.JMeter: JMeterHome=/Applications/jmeter3.2
+2018-08-22 09:33:33,226 INFO o.a.j.JMeter: user.dir  =/Users/jocelyn.xu/interfaceTest
+2018-08-22 09:33:33,226 INFO o.a.j.JMeter: PWD       =/Users/jocelyn.xu/interfaceTest
+2018-08-22 09:33:33,477 INFO o.a.j.JMeter: IP: 172.16.4.45 Name: JocelynxudeMacBook-Air.local FullName: 172.16.4.45
+2018-08-22 09:33:33,483 INFO o.a.j.s.FileServer: Default base='/Users/jocelyn.xu/interfaceTest'
+2018-08-22 09:33:33,483 INFO o.a.j.s.FileServer: Set new base='/Users/jocelyn.xu/interfaceTest/scripts'
+2018-08-22 09:33:33,672 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2018-08-22 09:33:33,689 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2018-08-22 09:33:33,695 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2018-08-22 09:33:33,706 INFO o.a.j.s.SaveService: Loading file: /Users/jocelyn.xu/interfaceTest/scripts/customer.jmx
+2018-08-22 09:33:33,795 WARN o.a.j.u.JMeterUtils: Exception 'For input string: "ture"' occurred when fetching boolean property:'CookieManager.save.cookies', defaulting to:false
+2018-08-22 09:33:33,795 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2018-08-22 09:33:33,873 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-08-22 09:33:33,873 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-08-22 09:33:33,873 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-08-22 09:33:33,874 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2018-08-22 09:33:33,874 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2018-08-22 09:33:33,874 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2018-08-22 09:33:33,943 INFO o.a.j.JMeter: Creating summariser <summary>
+2018-08-22 09:33:33,950 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2018-08-22 09:33:33,950 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-08-22 09:33:33,950 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2018-08-22 09:33:33,956 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2018-08-22 09:33:33,956 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2018-08-22 09:33:34,424 INFO o.a.j.t.TestPlan: added /Users/jocelyn.xu/interfaceTest/extras/SHA256.jar to classpath
+2018-08-22 09:33:34,520 INFO o.a.j.JMeter: 正在运行的测试 (1534901614520)
+2018-08-22 09:33:34,584 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 线程组
+2018-08-22 09:33:34,584 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group 线程组.
+2018-08-22 09:33:34,584 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2018-08-22 09:33:34,585 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=false
+2018-08-22 09:33:34,613 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2018-08-22 09:33:34,613 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2018-08-22 09:33:34,624 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-1
+2018-08-22 09:33:34,626 INFO o.a.j.s.FileServer: Stored: ../files/username.csv
+2018-08-22 09:33:34,640 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2018-08-22 09:33:34,641 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to utf-8
+2018-08-22 09:33:34,641 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2018-08-22 09:33:34,641 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2018-08-22 09:33:34,683 INFO o.a.j.r.Summariser: summary +      1 in 00:00:00 =    6.2/s Avg:    16 Min:    16 Max:    16 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2018-08-22 09:33:34,724 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = JocelynxudeMacBook-Air.local
+2018-08-22 09:33:34,731 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2018-08-22 09:33:35,079 WARN c.a.j.p.j.j.JSONPathExtractor: Extract failed
+java.lang.IllegalArgumentException: path can not be null or empty
+	at com.jayway.jsonpath.internal.Utils.notEmpty(Utils.java:386) ~[json-path-2.4.0.jar:2.4.0]
+	at com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:76) ~[json-path-2.4.0.jar:2.4.0]
+	at com.jayway.jsonpath.JsonPath.read(JsonPath.java:502) ~[json-path-2.4.0.jar:2.4.0]
+	at com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor.process(JSONPathExtractor.java:102) [jmeter-plugins-json-2.6.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.runPostProcessors(JMeterThread.java:827) [ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:517) [ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425) [ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254) [ApacheJMeter_core.jar:3.2 r1790748]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+2018-08-22 09:33:35,250 WARN c.a.j.p.j.j.JSONPathExtractor: Extract failed
+java.lang.IllegalArgumentException: path can not be null or empty
+	at com.jayway.jsonpath.internal.Utils.notEmpty(Utils.java:386) ~[json-path-2.4.0.jar:2.4.0]
+	at com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:76) ~[json-path-2.4.0.jar:2.4.0]
+	at com.jayway.jsonpath.JsonPath.read(JsonPath.java:502) ~[json-path-2.4.0.jar:2.4.0]
+	at com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor.process(JSONPathExtractor.java:102) [jmeter-plugins-json-2.6.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.runPostProcessors(JMeterThread.java:827) [ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:517) [ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:425) [ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254) [ApacheJMeter_core.jar:3.2 r1790748]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_144]
+2018-08-22 09:33:35,251 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-1
+2018-08-22 09:33:35,256 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-1
+2018-08-22 09:33:35,259 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2018-08-22 09:33:35,259 INFO o.a.j.s.FileServer: Close: ../files/username.csv
+2018-08-22 09:33:35,260 INFO o.a.j.r.Summariser: summary +      3 in 00:00:01 =    5.2/s Avg:    99 Min:     3 Max:   203 Err:     1 (33.33%) Active: 0 Started: 1 Finished: 1
+2018-08-22 09:33:35,260 INFO o.a.j.r.Summariser: summary =      4 in 00:00:01 =    5.4/s Avg:    78 Min:     3 Max:   203 Err:     1 (25.00%)
